@@ -6,7 +6,9 @@ ArrayList<Meteor> mets;
 void setup() {
   size(600, 600);
   frameRate(25);
-  background(0);
+  
+  initBackground();
+  
   earth = new Planet();
   earth.name = "Earth";
   earth.myColor = color(0, 0, 255);
@@ -22,7 +24,7 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  drawBackground();
 
   sun.drawPlanet();
   earth.drawPlanet();
