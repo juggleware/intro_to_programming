@@ -6,12 +6,12 @@ public class Planet{
   String name;
   
   public Planet(){
-    println("making an planet");
+    println("making a planet");
     loc = new int[2];
     assignDefaultValues();
   }
   
-  void assignDefaultValues(){
+  void assignDefaultValues(){ 
     println("assigning values");
     name = "a planet";
     loc[0] = 100;
@@ -21,22 +21,22 @@ public class Planet{
     dx = dy = 10;
   }
   
-  boolean isCollidingX(int x0, int x1) {
+  boolean isCollidingX(int x0, int x1) { // new function
     if ( loc[0] + mySize / 2 >= x0 || loc[0] - mySize / 2 <= x1 )
       return true;
     return false;
   }
 
-  boolean isCollidingY(int y0, int y1) {
+  boolean isCollidingY(int y0, int y1) { // new function
     if ( loc[1] + mySize / 2 >= y0 || loc[1] - mySize / 2 <= y1 )
       return true;
     return false;
   }
 
-  void checkEdgeBounce() {
-    if (  ) // needs to call some function...
+  void checkEdgeBounce() { // new function
+    if (loc[0]<0 || loc[0] > width  ) // check horizontal edge crossing
       dx *= -1;
-    if (  ) // needs to call some function...
+    if ( loc[1]<0 || loc[1] > height ) // check vertical edge crossing
       dy *= -1;
   }
   
