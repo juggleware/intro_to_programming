@@ -11,7 +11,7 @@ class particle{
   }
   void update(){
     v.add(f);
-    f = new PVector(0,0.02);
+    f = new PVector(random(-0.5,0.5),random(-0.5,0.5));
     x.add(v);
   }
 }
