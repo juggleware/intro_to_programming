@@ -16,7 +16,7 @@ class particle{
   }
 }
 ArrayList particles;
-float diam = 5;
+float diam = 30;
 float suck = 1.2;
 float k = 0.1;
 float c = 0.01;

@@ -21,22 +21,22 @@ public class Planet{
     dx = dy = 10;
   }
   
-  boolean isCollidingX(int x0, int x1) { // new function
-    if ( loc[0] + mySize / 2 >= x0 || loc[0] - mySize / 2 <= x1 )
+  boolean isCollidingX(int left, int right) { // new function
+    if ( loc[0] + mySize / 2 >= right || loc[0] - mySize / 2 <= left )
       return true;
     return false;
   }
 
-  boolean isCollidingY(int y0, int y1) { // new function
-    if ( loc[1] + mySize / 2 >= y0 || loc[1] - mySize / 2 <= y1 )
+  boolean isCollidingY(int top, int bottom) { // new function
+    if ( loc[1] + mySize / 2 >= bottom || loc[1] - mySize / 2 <= top )
       return true;
     return false;
   }
 
   void checkEdgeBounce() { // new function
-    if (loc[0]<0 || loc[0] > width  ) // check horizontal edge crossing
+    if (isCollidingX(0, width)  ) // check horizontal edge crossing
       dx *= -1;
-    if ( loc[1]<0 || loc[1] > height ) // check vertical edge crossing
+    if ( isCollidingY(0, height) ) // check vertical edge crossing
       dy *= -1;
   }
   
