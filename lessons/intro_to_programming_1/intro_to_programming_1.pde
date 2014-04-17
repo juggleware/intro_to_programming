@@ -31,7 +31,16 @@ void draw() {
 
   for ( Meteor met : mets) {
     met.drawPlanet();
+    
   }
+}
+
+boolean objectsAreColliding(Planet a, Planet c){
+  return false;
+}
+
+float distanceBetweenObjects(Planet a, Planet b){
+ return 0.0;
 }
 
 void mouseClicked() {
